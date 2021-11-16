@@ -7,6 +7,9 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <TextBox x:Name="input" Text="Votre text ici" HorizontalAlignment="Left" Height="38" Margin="50,50,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="85" TextChanged="TextBox_TextChanged"/>
+        <TextBox x:Name="output" HorizontalAlignment="Left" Height="38" Margin="150,50,0,0" TextWrapping="Wrap" Text="Resultat" VerticalAlignment="Top" Width="85" TextChanged="TextBox_TextChanged_1" IsEnabled="False"/>
+        <Button x:Name="send" Content="Button" HorizontalAlignment="Left" Margin="50,103,0,0" Width="185" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>
