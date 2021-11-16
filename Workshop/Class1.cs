@@ -33,10 +33,10 @@ namespace Workshop
     }
     public class View
     {
-        public void execute(string str)
+        public void execute()
         {
             Console.WriteLine("Merci d'entrer une chaine de charactère");
-            Console.ReadLine();
+            string? str = Console.ReadLine();
             var VM = new View_Modele();
             str = VM.scaleUP(str);
             Console.WriteLine("Votre nouvelle chaîne de charactère");
