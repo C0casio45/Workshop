@@ -1,2 +1,14 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿
+using System;
+
+namespace Workshop
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var view = new View();
+            view.execute();
+        }
+    }
+}
