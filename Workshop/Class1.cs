@@ -17,30 +17,50 @@ namespace Workshop
         public string scaleUP(string str)
         {
             char[] result = new char[str.Length];
-            int iteration = -1;
+            int iteration = 0;
             foreach (char c in str)
             {
                 int unicode = c;
-                if(unicode >= this.min_ASCII[0] && unicode <= this.min_ASCII[1])
+                if (unicode >= this.min_ASCII[0] && unicode <= this.min_ASCII[1])
                 {
-                    unicode = (this.min_ASCII[0] - 65) + this.maj_ASCII[0];
+                    unicode = (unicode - 97) + this.maj_ASCII[0];
+
+                    Console.WriteLine(unicode);
                 }
-                result[iteration++] = unicode;  
+                result[iteration++] = (char)unicode;  
             }
-            
+            str = new string(result);
             return str;
         }
     }
     public class View
     {
-        public void execute(string str)
+        public string[] unit { get; set; }
+        public void execute()
         {
             Console.WriteLine("Merci d'entrer une chaine de charactère");
-            Console.ReadLine();
+            string? str  = Console.ReadLine();
             var VM = new View_Modele();
             str = VM.scaleUP(str);
             Console.WriteLine("Votre nouvelle chaîne de charactère");
             Console.WriteLine(str);
+        }
+        public void test_unit()
+        {
+            var VM = new View_Modele();
+            Console.WriteLine("Liste des tests : ");
+            foreach (string item in unit)
+            {
+                Console.Write("Test : ");
+                Console.WriteLine(item);
+                Console.Write("Resultat : ");
+                Console.Write(VM.scaleUP(item));
+                Console.WriteLine();
+            }
+        }
+        public View()
+        {
+            unit = new string[4] { "maison", "Corse123", "%&ciel", "!*port" };
         }
     }
 }

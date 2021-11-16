@@ -8,7 +8,8 @@ namespace Workshop
         static void Main(string[] args)
         {
             var view = new View();
-            view.execute();
+            view.test_unit();
+            Console.ReadKey();
         }
     }
 }
