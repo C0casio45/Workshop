@@ -25,7 +25,7 @@ namespace Workshop
                 {
                     unicode = (this.min_ASCII[0] - 65) + this.maj_ASCII[0];
                 }
-                result[iteration++] = unicode;  
+                result[iteration++] = (char)unicode;  
             }
             
             return str;
